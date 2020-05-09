@@ -148,12 +148,9 @@ namespace web
                             }
                             catch (Exception e)
                             {
-                                try
-                                {
+                                try {
                                     element.SendKeys(words[2]);
-                                }
-                                catch (Exception e1)
-                                {
+                                } catch (Exception e1) {
 
                                 }
                             }
@@ -161,22 +158,21 @@ namespace web
                         else
                         {
 
-                            try
-                            {
+                            try {
                                 js.ExecuteScript("document.querySelector('" + id + "').textContent = '" + words[2] + "';");
                             }
-                            catch (Exception e)
-                            {
-                                try
-                                {
+                            catch (Exception e) {
+                                try {
                                     element.SendKeys(words[2]);
-                                }
-                                catch (Exception e1)
-                                {
+                                } catch (Exception e1) {
 
                                 }
                             }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine("no element has been assigned");
                     }
                 }
             }
