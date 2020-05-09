@@ -94,9 +94,7 @@ namespace web
                         try {
                             element.Clear();
                         }
-                        catch (Exception e) {
-                            Console.WriteLine(e.GetBaseException());
-                        }
+                        catch (Exception e) { Console.WriteLine(e.GetBaseException()); }
                     }
                 }
 
@@ -104,14 +102,10 @@ namespace web
 
                 else if (words[0].ToLower() == "elem" && words[1].ToLower() == "click")
                 {
-                    try
-                    {
+                    try {
                         element.Click();
                     }
-                    catch(Exception e)
-                    {
-
-                    }
+                    catch(Exception e){}
                 }
             }
 
@@ -164,9 +158,7 @@ namespace web
                             catch (Exception e) {
                                 try {
                                     element.SendKeys(words[2]);
-                                } catch (Exception e1) {
-
-                                }
+                                } catch (Exception e1) {}
                             }
                         }
                     }
