@@ -144,9 +144,7 @@ namespace web
                             {
                                 try {
                                     element.SendKeys(words[2]);
-                                } catch (Exception e1) {
-
-                                }
+                                } catch (Exception e1) {}
                             }
                         }
                         else
